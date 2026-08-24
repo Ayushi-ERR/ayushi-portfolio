@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Force Vite's #root to never constrain width */
+#root {
+  width: 100%;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
