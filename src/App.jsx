@@ -376,10 +376,10 @@ function Hero() {
           <div className="hero-photo-ring-inner" />
           <div className="hero-photo">
             <img
-              src="/profile.png"
+              src="/profile.jpg"
               alt="Ayushi Sinha"
               className="hero-photo-img"
-              onError={e => { e.target.src = '/profile.PNG' }}
+              onError={e => { e.target.src = '/profile.jpg' }}
             />
           </div>
 
@@ -637,6 +637,170 @@ function Footer() {
   )
 }
 
+// ── Chatbot ───────────────────────────────────────────────────────
+const KB = [
+  {
+    keys: ['who are you', 'about you', 'tell me about', 'introduce', 'yourself', 'who is ayushi', 'background'],
+    answer: "Ayushi is a Business Analyst wrapping up her Master of Business Analytics at La Trobe University, Melbourne (graduating 2026). She has 3+ years of real-world experience across fintech, media operations, and marketing — and she's been building at the intersection of data and product ever since. Think of her as someone who speaks both fluent Stakeholder and fluent Python. She's actively looking for BA or analytics roles in Melbourne.",
+    chips: ['What projects has she built?', 'What are her skills?', 'Is she a team player?'],
+  },
+  {
+    keys: ['skill', 'tools', 'tech', 'know', 'experience with', 'python', 'sql', 'power bi', 'tableau', 'react'],
+    answer: "The toolkit: Power BI, Tableau, DAX, Plotly for BI. Python, SQL, R, SAS for analytics. React, FastAPI, Supabase for when she decides to build the whole thing herself. Azure and Databricks on the cloud side. What's actually rare is that she can go from a vague business question on Monday to a working dashboard or ML model by Friday — and explain it to a non-technical exec on the same call.",
+    chips: ['Tell me about her projects', 'What ML has she done?', 'What roles is she targeting?'],
+  },
+  {
+    keys: ['project', 'built', 'campusride', 'qantas', 'charlie', 'nextstep'],
+    answer: "A few highlights worth knowing: CampusRide — a full-stack ride-sharing app built end-to-end (React + FastAPI + Supabase, live on Vercel). A Lost & Found matching tool for Qantas that uses fuzzy string similarity to match luggage across thousands of records. Charlie 2.0 — a RAG chatbot with a safety filter and audit logging, built to handle real enterprise queries. And a diabetes risk ML pipeline on 70,000+ records with SHAP explainability and a Power BI dashboard. Each one started with a real problem.",
+    chips: ['Tell me about the diabetes project', 'Did she build this portfolio?', 'What roles is she targeting?'],
+  },
+  {
+    keys: ['diabetes', 'machine learning', 'ml', 'xgboost', 'shap', 'model'],
+    answer: "70,000+ patient records. An 8:1 class imbalance she caught before it could quietly ruin the model. Three classifiers trained and compared — XGBoost won at 83% AUC-ROC. Then SHAP analysis to make the predictions explainable, not just accurate. Finished with a Power BI dashboard so clinicians and managers could explore risk by age group, BMI, and lifestyle — no Python required. It's the kind of project that looks technical on the surface but is really about making sure the right people understand the right risk.",
+    chips: ['What other projects has she built?', 'What are her skills?', 'How can I contact her?'],
+  },
+  {
+    keys: ['goal', 'role', 'looking for', 'job', 'opportunity', 'internship', 'hire', 'open to', 'career', 'target'],
+    answer: "She's looking for Business Analyst or data analytics roles in Melbourne — ideally somewhere that treats data as a strategic asset, not a reporting afterthought. She's especially drawn to AI enablement, fintech, and product-adjacent analytics. She recently met with a Director of AI and Enablement who offered her an internship on the spot, so the momentum is real. Graduating 2026 and ready to go.",
+    chips: ['What makes her stand out?', 'Tell me about her experience', 'How can I contact her?'],
+  },
+  {
+    keys: ['experience', 'work history', 'worked', 'job history', 'ariso', 'cision', 'emotorad', 'patterns'],
+    answer: "Her career spans fintech, media, and marketing. At Ariso Technology she was a Business Analyst — writing user stories, mapping journeys, and scoping an MVP directly with founders. At CISION (PR Newswire) she managed 20+ client accounts and delivered data-backed performance reports. Earlier roles at EMotorad and Patterns LLC gave her hands-on exposure to campaign analytics and customer behaviour data. The thread? Turning messy, ambiguous situations into clear, actionable outputs.",
+    chips: ['What projects has she built?', 'What are her skills?', 'What roles is she targeting?'],
+  },
+  {
+    keys: ['contact', 'reach', 'email', 'connect', 'linkedin', 'hire her', 'get in touch'],
+    answer: "Best move you'll make today: ayushisinha1149@gmail.com or LinkedIn at linkedin.com/in/ayushi-sinha-154362206. She responds quickly, asks good questions, and won't waste your time. Give it a shot.",
+    chips: ['Tell me about her background', 'What projects has she built?', 'What makes her stand out?'],
+  },
+  {
+    keys: ['strength', 'best at', 'good at', 'standout', 'different', 'unique', 'what makes'],
+    answer: "Honestly? The combination. She can sit in a requirements workshop, ask the questions nobody else thought to ask, then go build the solution herself. She's not just technical and not just a communicator — she's done both under real deadlines, with real stakeholders. That's rarer than it sounds, especially at this point in a career.",
+    chips: ['What projects has she built?', 'What tools does she use?', 'How can I contact her?'],
+  },
+  {
+    keys: ['hobby', 'hobbies', 'outside work', 'personal', 'free time', 'fun', 'life', 'interests', 'do you do'],
+    answer: "When she's not turning datasets into decisions, you'll find her trying a new recipe (her cooking is apparently not bad — her words), reading anything from business theory to fiction, or out with a camera. The photography one is interesting — she says it's taught her to notice what most people walk past. Which, if you think about it, is exactly the skill you want in an analyst.",
+    chips: ['Is she a team player?', 'Does she solve problems well?', 'Tell me about her work experience'],
+  },
+  {
+    keys: ['team', 'collaborate', 'work with others', 'teamwork', 'group', 'colleague', 'people skills'],
+    answer: "Her teammates would call her 'the one who figures it out.' Not the loudest in the room — but the one people turn to when something's unclear, broken, or just needs someone to actually own it. She's worked across client-facing, cross-functional, and startup environments, so she's learned to adapt fast and communicate without jargon.",
+    chips: ['Does she solve problems well?', 'What are her skills?', 'What is she like outside work?'],
+  },
+  {
+    keys: ['problem', 'problem solving', 'critical thinking', 'think', 'solve', 'handle', 'approach'],
+    answer: "Her default is: question the problem before solving it. In the diabetes project, the first instinct was to train a model — she caught the class imbalance first and rebuilt the foundation. At Qantas, the brief was 'match lost luggage' — she built a tool non-technical staff could actually use. The pattern is: slow down on the setup so you can move fast on the solution.",
+    chips: ['Tell me about her projects', 'What are her skills?', 'Is she a team player?'],
+  },
+  {
+    keys: ['this portfolio', 'who made', 'who built', 'did you make', 'did she make', 'how was this made', 'built this', 'yourself'],
+    answer: "She built it with AI assistance — and she'll be the first to tell you that. React + Vite, deployed on Vercel, with every design decision, content choice, and direction made by her. She used AI the way a good analyst uses tools: to move faster, not to think less. The chatbot you're talking to right now? Also part of it. Meta, right?",
+    chips: ['What projects has she built?', 'What are her skills?', 'How can I contact her?'],
+  },
+]
+
+const GREETING = {
+  answer: "How can I help you hire me today? 👋 I'm Beyond Resume — Ayushi's portfolio assistant. Ask me anything the CV won't tell you.",
+  chips: ['Who is Ayushi?', 'What projects has she built?', 'What is she like outside work?', 'Did she build this herself?'],
+}
+
+function getBotResponse(input) {
+  const lower = input.toLowerCase()
+  for (const entry of KB) {
+    if (entry.keys.some(k => lower.includes(k))) return entry
+  }
+  return {
+    answer: "That's a great question! For anything specific, you can reach Ayushi directly at ayushisinha1149@gmail.com — she'd love to chat.",
+    chips: ['Who is Ayushi?', 'What are her skills?', 'What projects has she built?'],
+  }
+}
+
+function ChatBot() {
+  const [open, setOpen] = useState(false)
+  const [messages, setMessages] = useState([{ from: 'bot', text: GREETING.answer, chips: GREETING.chips }])
+  const [input, setInput] = useState('')
+  const [typing, setTyping] = useState(false)
+  const bottomRef = useRef(null)
+
+  useEffect(() => {
+    if (bottomRef.current) bottomRef.current.scrollIntoView({ behavior: 'smooth' })
+  }, [messages, typing])
+
+  function send(text) {
+    const q = text.trim()
+    if (!q) return
+    setMessages(prev => [...prev, { from: 'user', text: q }])
+    setInput('')
+    setTyping(true)
+    setTimeout(() => {
+      const res = getBotResponse(q)
+      setMessages(prev => [...prev, { from: 'bot', text: res.answer, chips: res.chips }])
+      setTyping(false)
+    }, 700)
+  }
+
+  return (
+    <>
+      <button className={`chat-fab ${open ? 'chat-fab-open' : ''}`} onClick={() => setOpen(o => !o)} aria-label="Chat with Ayushi's assistant">
+        {open
+          ? <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4l12 12M16 4L4 16" stroke="white" strokeWidth="2" strokeLinecap="round"/></svg>
+          : <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        }
+      </button>
+
+      {open && (
+        <div className="chat-panel">
+          <div className="chat-header">
+            <div className="chat-avatar">A</div>
+            <div>
+              <p className="chat-header-name">Beyond Resume</p>
+              <p className="chat-header-sub">Ask what the CV won't tell you</p>
+            </div>
+          </div>
+
+          <div className="chat-messages">
+            {messages.map((m, i) => (
+              <div key={i} className={`chat-msg-wrap ${m.from}`}>
+                <div className={`chat-bubble ${m.from}`}>{m.text}</div>
+                {m.chips && m.from === 'bot' && (
+                  <div className="chat-chips">
+                    {m.chips.map((c, j) => (
+                      <button key={j} className="chat-chip" onClick={() => send(c)}>{c}</button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            {typing && (
+              <div className="chat-msg-wrap bot">
+                <div className="chat-bubble bot chat-typing">
+                  <span/><span/><span/>
+                </div>
+              </div>
+            )}
+            <div ref={bottomRef} />
+          </div>
+
+          <div className="chat-input-row">
+            <input
+              className="chat-input"
+              placeholder="Ask about skills, projects..."
+              value={input}
+              onChange={e => setInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && send(input)}
+            />
+            <button className="chat-send" onClick={() => send(input)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
+
 // ── App ───────────────────────────────────────────────────────────
 export default function App() {
   return (
@@ -652,6 +816,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ChatBot />
     </div>
   )
 }
