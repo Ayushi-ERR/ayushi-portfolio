@@ -641,7 +641,7 @@ function Footer() {
 const KB = [
   {
     keys: ['who are you', 'about you', 'tell me about', 'introduce', 'yourself', 'who is ayushi', 'background'],
-    answer: "Ayushi is a Business Analyst finishing her Master of Business Analytics at La Trobe University Melbourne, graduating in 2026. She has 3+ years of experience across fintech, media operations, and marketing, and she works at the intersection of data and product. The short version: she speaks fluent stakeholder and fluent Python. Actively looking for BA and analytics roles in Melbourne.",
+    answer: "Ayushi came to Melbourne for better opportunities and stayed because the work here is genuinely interesting. She started in marketing, good at it, doing fine, but always felt like she was one layer away from where the real decisions were being made. When she got into business analytics it just clicked in a way nothing had before. Not in a motivational-poster way. More like: this is what I would do even if nobody was paying me, so I may as well get very good at it. She is the youngest in her family. Her sister is a data scientist, her brother is an app developer, so building things is basically a family trait. She loves a challenge and gets genuinely restless without one.",
     chips: ['What projects has she built?', 'What are her skills?', 'Is she a team player?'],
   },
   {
@@ -670,13 +670,13 @@ const KB = [
     chips: ['What projects has she built?', 'What are her skills?', 'What roles is she targeting?'],
   },
   {
-    keys: ['contact', 'reach', 'email', 'connect', 'linkedin', 'hire her', 'get in touch'],
+    keys: ['contact', 'reach', 'email', 'connect', 'linkedin', 'get in touch'],
     answer: "Best move: ayushisinha1149@gmail.com or LinkedIn at linkedin.com/in/ayushi-sinha-154362206. She responds fast, asks good questions and is genuinely easy to work with.",
     chips: ['Tell me about her background', 'What projects has she built?', 'What makes her stand out?'],
   },
   {
-    keys: ['strength', 'best at', 'good at', 'standout', 'different', 'unique', 'what makes', 'why hire'],
-    answer: "The combination is what stands out. She can run a requirements workshop in the morning and build the solution herself by the afternoon. She is not just technical and not just a communicator. She has done both under real pressure with real stakeholders, and that is genuinely rare at this stage.",
+    keys: ['strength', 'best at', 'good at', 'standout', 'different', 'unique', 'what makes', 'why hire', 'why should', 'why would', 'should i hire', 'reason to hire', 'hire her'],
+    answer: "A few honest reasons. She has 3+ years of real experience, not just academic projects. She can go from a stakeholder conversation to a working dashboard or ML model without needing someone to bridge the gap for her. Her projects are live, not PDFs. She asks better questions than most people at her level, and she is the kind of person who figures things out rather than waiting to be told. That combination of technical skill, business thinking and self-sufficiency is harder to find than it should be.",
     chips: ['What projects has she built?', 'What tools does she use?', 'How can I contact her?'],
   },
   {
