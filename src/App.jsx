@@ -641,7 +641,7 @@ function Footer() {
 const KB = [
   {
     keys: ['who are you', 'about you', 'tell me about', 'introduce', 'yourself', 'who is ayushi', 'background'],
-    answer: "Ayushi came to Melbourne for better opportunities and stayed because the work here is genuinely interesting. She started in marketing, good at it, doing fine, but always felt like she was one layer away from where the real decisions were being made. When she got into business analytics it just clicked in a way nothing had before. Not in a motivational-poster way. More like: this is what I would do even if nobody was paying me, so I may as well get very good at it. She is the youngest in her family. Her sister is a data scientist, her brother is an app developer, so building things is basically a family trait. She loves a challenge and gets genuinely restless without one.",
+    answer: "Ayushi came to Melbourne for better opportunities and stayed because the work here is genuinely interesting. She started in marketing, good at it, doing fine, but always felt like she was one layer away from where the real decisions were being made. When she got into business analytics it just clicked in a way nothing had before. Not in a motivational-poster way. More like: this is what I would do even if nobody was paying me, so I may as well get very good at it. She is the youngest in her family, her sister is a data scientist and her brother is an app developer, so building things is basically a family trait. She loves a challenge and gets genuinely restless without one.",
     chips: ['What projects has she built?', 'What are her skills?', 'Is she a team player?'],
   },
   {
@@ -676,7 +676,7 @@ const KB = [
   },
   {
     keys: ['strength', 'best at', 'good at', 'standout', 'different', 'unique', 'what makes', 'why hire', 'why should', 'why would', 'should i hire', 'reason to hire', 'hire her'],
-    answer: "A few honest reasons. She has 3+ years of real experience, not just academic projects. She can go from a stakeholder conversation to a working dashboard or ML model without needing someone to bridge the gap for her. Her projects are live, not PDFs. She asks better questions than most people at her level, and she is the kind of person who figures things out rather than waiting to be told. That combination of technical skill, business thinking and self-sufficiency is harder to find than it should be.",
+    answer: "Honest answer: she does not have 3 years as a Business Analyst with that exact title. She has 3 years across marketing, client operations and fintech where she was doing the work without always having the label. Her most recent role at Ariso Technology was officially as a Business Analyst, and that is where everything clicked into place. What she brings is someone who has seen how businesses actually run, picked up the right technical skills alongside that, and can hit the ground running without a six-month ramp. Also, she built this entire portfolio and chatbot for you. If that does not say something, I do not know what does.",
     chips: ['What projects has she built?', 'What tools does she use?', 'How can I contact her?'],
   },
   {
