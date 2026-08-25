@@ -640,7 +640,7 @@ function Footer() {
 // ── Chatbot ───────────────────────────────────────────────────────
 const KB = [
   {
-    keys: ['who are you', 'about you', 'tell me about', 'introduce', 'yourself', 'who is ayushi', 'background'],
+    keys: ['who are you', 'about you', 'introduce', 'yourself', 'who is ayushi', 'background', 'about her'],
     answer: "Ayushi came to Melbourne for better opportunities and stayed because the work here is genuinely interesting. She started in marketing, good at it, doing fine, but always felt like she was one layer away from where the real decisions were being made. When she got into business analytics it just clicked in a way nothing had before. Not in a motivational-poster way. More like: this is what I would do even if nobody was paying me, so I may as well get very good at it. She is the youngest in her family, her sister is a data scientist and her brother is an app developer, so building things is basically a family trait. She loves a challenge and gets genuinely restless without one.",
     chips: ['What projects has she built?', 'What are her skills?', 'Is she a team player?'],
   },
@@ -665,7 +665,7 @@ const KB = [
     chips: ['What makes her stand out?', 'Tell me about her experience', 'How can I contact her?'],
   },
   {
-    keys: ['experience', 'work history', 'worked', 'job history', 'ariso', 'cision', 'emotorad', 'patterns'],
+    keys: ['experience', 'work history', 'work experience', 'job history', 'ariso', 'cision', 'emotorad', 'patterns', 'tell me about her work', 'where has she worked'],
     answer: "Her career spans fintech, media and marketing. At Ariso Technology she worked as a Business Analyst, writing user stories, mapping user journeys and scoping an MVP with founders. At CISION (PR Newswire) she managed 20+ client accounts and delivered data-backed performance reporting. Earlier roles at EMotorad and Patterns LLC gave her hands-on exposure to campaign analytics and customer behaviour data. The common thread is taking messy or ambiguous situations and turning them into clear, usable outputs.",
     chips: ['What projects has she built?', 'What are her skills?', 'What roles is she targeting?'],
   },
@@ -676,7 +676,7 @@ const KB = [
   },
   {
     keys: ['strength', 'best at', 'good at', 'standout', 'different', 'unique', 'what makes', 'why hire', 'why should', 'why would', 'should i hire', 'reason to hire', 'hire her'],
-    answer: "Honest answer: she does not have 3 years as a Business Analyst with that exact title. She has 3 years across marketing, client operations and fintech where she was doing the work without always having the label. Her most recent role at Ariso Technology was officially as a Business Analyst, and that is where everything clicked into place. What she brings is someone who has seen how businesses actually run, picked up the right technical skills alongside that, and can hit the ground running without a six-month ramp. Also, she built this entire portfolio and chatbot for you. If that does not say something, I do not know what does.",
+    answer: "Because she built this portfolio and this chatbot for you. Kidding. Sort of. She spent 3 years across marketing, operations and fintech before stepping into a Business Analyst role, which means she understands how businesses actually work before trying to improve them. She translates between technical teams and business stakeholders without losing anything in between. She maps processes, writes requirements, asks the questions nobody else thought to ask, and actually follows through. On top of that, Power BI, Python, SQL. She does not just recommend solutions, she builds them.",
     chips: ['What projects has she built?', 'What tools does she use?', 'How can I contact her?'],
   },
   {
