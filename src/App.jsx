@@ -641,69 +641,84 @@ function Footer() {
 const KB = [
   {
     keys: ['who are you', 'about you', 'tell me about', 'introduce', 'yourself', 'who is ayushi', 'background'],
-    answer: "Ayushi is a Business Analyst wrapping up her Master of Business Analytics at La Trobe University, Melbourne (graduating 2026). She has 3+ years of real-world experience across fintech, media operations, and marketing — and she's been building at the intersection of data and product ever since. Think of her as someone who speaks both fluent Stakeholder and fluent Python. She's actively looking for BA or analytics roles in Melbourne.",
+    answer: "Ayushi is a Business Analyst finishing her Master of Business Analytics at La Trobe University Melbourne, graduating in 2026. She has 3+ years of experience across fintech, media operations, and marketing, and she works at the intersection of data and product. The short version: she speaks fluent stakeholder and fluent Python. Actively looking for BA and analytics roles in Melbourne.",
     chips: ['What projects has she built?', 'What are her skills?', 'Is she a team player?'],
   },
   {
     keys: ['skill', 'tools', 'tech', 'know', 'experience with', 'python', 'sql', 'power bi', 'tableau', 'react'],
-    answer: "The toolkit: Power BI, Tableau, DAX, Plotly for BI. Python, SQL, R, SAS for analytics. React, FastAPI, Supabase for when she decides to build the whole thing herself. Azure and Databricks on the cloud side. What's actually rare is that she can go from a vague business question on Monday to a working dashboard or ML model by Friday — and explain it to a non-technical exec on the same call.",
+    answer: "Power BI, Tableau, DAX and Plotly for BI. Python, SQL, R and SAS for analytics. React, FastAPI and Supabase for when she decides to build the whole thing herself. Azure and Databricks on the cloud side. What's actually rare is that she can take a vague business question on Monday and have a working dashboard or ML model ready by Friday, then explain it clearly to a non-technical exec on the same call.",
     chips: ['Tell me about her projects', 'What ML has she done?', 'What roles is she targeting?'],
   },
   {
     keys: ['project', 'built', 'campusride', 'qantas', 'charlie', 'nextstep'],
-    answer: "A few highlights worth knowing: CampusRide — a full-stack ride-sharing app built end-to-end (React + FastAPI + Supabase, live on Vercel). A Lost & Found matching tool for Qantas that uses fuzzy string similarity to match luggage across thousands of records. Charlie 2.0 — a RAG chatbot with a safety filter and audit logging, built to handle real enterprise queries. And a diabetes risk ML pipeline on 70,000+ records with SHAP explainability and a Power BI dashboard. Each one started with a real problem.",
-    chips: ['Tell me about the diabetes project', 'Did she build this portfolio?', 'What roles is she targeting?'],
+    answer: "A few worth knowing about: CampusRide is a full-stack ride-sharing app she built end-to-end using React, FastAPI and Supabase, live on Vercel. She built a Lost and Found matching tool for Qantas using fuzzy string similarity across thousands of records, with a Streamlit interface so non-technical staff could actually use it. Charlie 2.0 is a RAG chatbot with a safety filter and audit logging. And there's an ML pipeline on 70,000+ health records predicting diabetes risk with SHAP explainability and a Power BI dashboard. Each one started with a real problem.",
+    chips: ['Tell me about the diabetes project', 'What roles is she targeting?', 'What makes her stand out?'],
   },
   {
     keys: ['diabetes', 'machine learning', 'ml', 'xgboost', 'shap', 'model'],
-    answer: "70,000+ patient records. An 8:1 class imbalance she caught before it could quietly ruin the model. Three classifiers trained and compared — XGBoost won at 83% AUC-ROC. Then SHAP analysis to make the predictions explainable, not just accurate. Finished with a Power BI dashboard so clinicians and managers could explore risk by age group, BMI, and lifestyle — no Python required. It's the kind of project that looks technical on the surface but is really about making sure the right people understand the right risk.",
+    answer: "70,000+ patient records, an 8:1 class imbalance she caught before it could wreck the model, and three classifiers trained side by side. XGBoost came out on top at 83% AUC-ROC. She then used SHAP to make the predictions explainable, not just accurate. The whole thing is paired with a Power BI dashboard so clinicians and managers can explore risk by age, BMI and lifestyle without touching a line of code.",
     chips: ['What other projects has she built?', 'What are her skills?', 'How can I contact her?'],
   },
   {
-    keys: ['goal', 'role', 'looking for', 'job', 'opportunity', 'internship', 'hire', 'open to', 'career', 'target'],
-    answer: "She's looking for Business Analyst or data analytics roles in Melbourne — ideally somewhere that treats data as a strategic asset, not a reporting afterthought. She's especially drawn to AI enablement, fintech, and product-adjacent analytics. She recently met with a Director of AI and Enablement who offered her an internship on the spot, so the momentum is real. Graduating 2026 and ready to go.",
+    keys: ['goal', 'role', 'looking for', 'job', 'opportunity', 'open to', 'career', 'target', 'available'],
+    answer: "She is looking for Business Analyst or data analytics roles in Melbourne, ideally somewhere that treats data as a strategic asset rather than a reporting formality. She is especially drawn to AI enablement, fintech and product-adjacent analytics. Graduating in 2026 and ready to contribute from day one.",
     chips: ['What makes her stand out?', 'Tell me about her experience', 'How can I contact her?'],
   },
   {
     keys: ['experience', 'work history', 'worked', 'job history', 'ariso', 'cision', 'emotorad', 'patterns'],
-    answer: "Her career spans fintech, media, and marketing. At Ariso Technology she was a Business Analyst — writing user stories, mapping journeys, and scoping an MVP directly with founders. At CISION (PR Newswire) she managed 20+ client accounts and delivered data-backed performance reports. Earlier roles at EMotorad and Patterns LLC gave her hands-on exposure to campaign analytics and customer behaviour data. The thread? Turning messy, ambiguous situations into clear, actionable outputs.",
+    answer: "Her career spans fintech, media and marketing. At Ariso Technology she worked as a Business Analyst, writing user stories, mapping user journeys and scoping an MVP with founders. At CISION (PR Newswire) she managed 20+ client accounts and delivered data-backed performance reporting. Earlier roles at EMotorad and Patterns LLC gave her hands-on exposure to campaign analytics and customer behaviour data. The common thread is taking messy or ambiguous situations and turning them into clear, usable outputs.",
     chips: ['What projects has she built?', 'What are her skills?', 'What roles is she targeting?'],
   },
   {
     keys: ['contact', 'reach', 'email', 'connect', 'linkedin', 'hire her', 'get in touch'],
-    answer: "Best move you'll make today: ayushisinha1149@gmail.com or LinkedIn at linkedin.com/in/ayushi-sinha-154362206. She responds quickly, asks good questions, and won't waste your time. Give it a shot.",
+    answer: "Best move: ayushisinha1149@gmail.com or LinkedIn at linkedin.com/in/ayushi-sinha-154362206. She responds fast, asks good questions and is genuinely easy to work with.",
     chips: ['Tell me about her background', 'What projects has she built?', 'What makes her stand out?'],
   },
   {
-    keys: ['strength', 'best at', 'good at', 'standout', 'different', 'unique', 'what makes'],
-    answer: "Honestly? The combination. She can sit in a requirements workshop, ask the questions nobody else thought to ask, then go build the solution herself. She's not just technical and not just a communicator — she's done both under real deadlines, with real stakeholders. That's rarer than it sounds, especially at this point in a career.",
+    keys: ['strength', 'best at', 'good at', 'standout', 'different', 'unique', 'what makes', 'why hire'],
+    answer: "The combination is what stands out. She can run a requirements workshop in the morning and build the solution herself by the afternoon. She is not just technical and not just a communicator. She has done both under real pressure with real stakeholders, and that is genuinely rare at this stage.",
     chips: ['What projects has she built?', 'What tools does she use?', 'How can I contact her?'],
   },
   {
-    keys: ['hobby', 'hobbies', 'outside work', 'personal', 'free time', 'fun', 'life', 'interests', 'do you do'],
-    answer: "When she's not turning datasets into decisions, you'll find her trying a new recipe (her cooking is apparently not bad — her words), reading anything from business theory to fiction, or out with a camera. The photography one is interesting — she says it's taught her to notice what most people walk past. Which, if you think about it, is exactly the skill you want in an analyst.",
-    chips: ['Is she a team player?', 'Does she solve problems well?', 'Tell me about her work experience'],
+    keys: ['hobby', 'hobbies', 'outside work', 'personal', 'free time', 'fun', 'life', 'interests', 'do outside', 'passion'],
+    answer: "Outside of work she cooks, reads and takes photos. The photography thing is interesting because she says it has trained her to notice details most people walk past. That skill translates directly into analytics. Also her cooking is genuinely good, apparently.",
+    chips: ['Is she a team player?', 'Does she handle problems well?', 'Tell me about her work experience'],
   },
   {
-    keys: ['team', 'collaborate', 'work with others', 'teamwork', 'group', 'colleague', 'people skills'],
-    answer: "Her teammates would call her 'the one who figures it out.' Not the loudest in the room — but the one people turn to when something's unclear, broken, or just needs someone to actually own it. She's worked across client-facing, cross-functional, and startup environments, so she's learned to adapt fast and communicate without jargon.",
-    chips: ['Does she solve problems well?', 'What are her skills?', 'What is she like outside work?'],
+    keys: ['team', 'collaborate', 'work with others', 'teamwork', 'group', 'colleague', 'people skills', 'communication'],
+    answer: "Her teammates would describe her as the person who figures it out. Not the loudest in the room, but the one people turn to when something is unclear, broken or just needs someone to own it. She has worked across client-facing, cross-functional and startup environments so she adapts fast and communicates without jargon.",
+    chips: ['Does she handle problems well?', 'What are her skills?', 'What is she like outside work?'],
   },
   {
-    keys: ['problem', 'problem solving', 'critical thinking', 'think', 'solve', 'handle', 'approach'],
-    answer: "Her default is: question the problem before solving it. In the diabetes project, the first instinct was to train a model — she caught the class imbalance first and rebuilt the foundation. At Qantas, the brief was 'match lost luggage' — she built a tool non-technical staff could actually use. The pattern is: slow down on the setup so you can move fast on the solution.",
+    keys: ['problem', 'problem solving', 'critical thinking', 'think', 'solve', 'handle', 'approach', 'pressure'],
+    answer: "She tends to question the problem before jumping to the solution. On the diabetes project, the obvious move was to train a model immediately. She caught the class imbalance first and rebuilt the foundation before touching an algorithm. At Qantas the brief was to match lost luggage but she ended up building a tool that non-technical staff could actually use independently. The pattern is consistent: slow down at the start so everything moves faster after.",
     chips: ['Tell me about her projects', 'What are her skills?', 'Is she a team player?'],
   },
   {
-    keys: ['this portfolio', 'who made', 'who built', 'did you make', 'did she make', 'how was this made', 'built this', 'yourself'],
-    answer: "She built it with AI assistance — and she'll be the first to tell you that. React + Vite, deployed on Vercel, with every design decision, content choice, and direction made by her. She used AI the way a good analyst uses tools: to move faster, not to think less. The chatbot you're talking to right now? Also part of it. Meta, right?",
+    keys: ['this portfolio', 'who made', 'who built', 'did you make', 'did she make', 'how was this made', 'built this', 'make this'],
+    answer: "She built it with AI assistance and she will be the first to say so. React and Vite, deployed on Vercel. Every design decision, piece of content and direction came from her. She used AI the way a good analyst uses any tool: to move faster, not to think less. The chatbot you are talking to right now is also part of it. A little meta but it works.",
+    chips: ['What projects has she built?', 'What are her skills?', 'How can I contact her?'],
+  },
+  {
+    keys: ['hi', 'hello', 'hey', 'sup', 'yo', 'good morning', 'good afternoon'],
+    answer: "Hey! Ask me anything about Ayushi that her resume did not cover.",
+    chips: ['Who is Ayushi?', 'What projects has she built?', 'What is she like outside work?'],
+  },
+  {
+    keys: ['not like', 'dont like', 'dislike', 'not impressed', 'meh', 'boring', 'bad', 'not good', 'worst', 'hate'],
+    answer: "Fair enough, everyone has a type. What specifically put you off? I might be able to change your mind, or at least give you a better picture before you decide.",
+    chips: ['What makes her stand out?', 'Tell me about her projects', 'What is she like as a person?'],
+  },
+  {
+    keys: ['ok', 'okay', 'cool', 'nice', 'great', 'interesting', 'sounds good', 'alright'],
+    answer: "Glad to hear it. What else do you want to know?",
     chips: ['What projects has she built?', 'What are her skills?', 'How can I contact her?'],
   },
 ]
 
 const GREETING = {
-  answer: "How can I help you hire me today? 👋 I'm Beyond Resume — Ayushi's portfolio assistant. Ask me anything the CV won't tell you.",
-  chips: ['Who is Ayushi?', 'What projects has she built?', 'What is she like outside work?', 'Did she build this herself?'],
+  answer: "How can I help you hire me today? I'm Beyond Resume, Ayushi's portfolio assistant. Ask me anything the CV won't tell you.",
+  chips: ['Who is Ayushi?', 'What projects has she built?', 'What is she like outside work?', 'What makes her stand out?'],
 }
 
 function getBotResponse(input) {
@@ -712,7 +727,7 @@ function getBotResponse(input) {
     if (entry.keys.some(k => lower.includes(k))) return entry
   }
   return {
-    answer: "That's a great question! For anything specific, you can reach Ayushi directly at ayushisinha1149@gmail.com — she'd love to chat.",
+    answer: "Not sure I caught that. Try asking about her skills, projects, work style or what she gets up to outside of work.",
     chips: ['Who is Ayushi?', 'What are her skills?', 'What projects has she built?'],
   }
 }
@@ -745,8 +760,8 @@ function ChatBot() {
     <>
       <button className={`chat-fab ${open ? 'chat-fab-open' : ''}`} onClick={() => setOpen(o => !o)} aria-label="Chat with Ayushi's assistant">
         {open
-          ? <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4l12 12M16 4L4 16" stroke="white" strokeWidth="2" strokeLinecap="round"/></svg>
-          : <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          ? <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 4l12 12M16 4L4 16" stroke="white" strokeWidth="2" strokeLinecap="round"/></svg>
+          : <><svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{flexShrink:0}}><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg><span className="chat-fab-label">Beyond Resume</span></>
         }
       </button>
 
