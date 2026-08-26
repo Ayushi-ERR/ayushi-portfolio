@@ -15,6 +15,7 @@
       position: fixed;
       bottom: 24px;
       right: 24px;
+      --df-messenger-chat-window-height: 440px;
       --df-messenger-font-family: Inter, sans-serif;
       --df-messenger-font-color: #e5e7eb;
       --df-messenger-chat-background: #064E3B;
@@ -27,9 +28,9 @@
       --df-messenger-button-titlebar-color: #064E3B;
       --df-messenger-button-titlebar-font-color: #ffffff;
       --df-messenger-send-icon: #059669;
-      --df-messenger-input-background: #065F46;
-      --df-messenger-input-font-color: #ffffff;
-      --df-messenger-input-placeholder-font-color: #9ca3af;
+      --df-messenger-input-background: #ffffff;
+      --df-messenger-input-font-color: #1a1a1a;
+      --df-messenger-input-placeholder-font-color: #6b7280;
       --df-messenger-minimized-chat-close-icon-color: #ffffff;
     }
   </style>
@@ -45,5 +46,11 @@
       </df-messenger-chat-bubble>
     </df-messenger>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.addEventListener('df-messenger-loaded', function() {
+        var el = document.querySelector('df-messenger');
+        el.renderCustomText('How can I help you hire Ayushi today?');
+      });
+    </script>
   </body>
 </html>
