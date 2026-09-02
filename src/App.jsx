@@ -26,7 +26,7 @@ const skills = [
 ]
 
 const iconMap = {
-  'Power BI':        'https://cdn.simpleicons.org/microsoftpowerbi/F2C811',
+  'Power BI':        'https://img.icons8.com/color/48/power-bi.png',
   'Tableau':         'https://cdn.simpleicons.org/tableau/E97627',
   'Plotly':          'https://cdn.simpleicons.org/plotly/3F4F75',
   'Python':          'https://cdn.simpleicons.org/python/3776AB',
