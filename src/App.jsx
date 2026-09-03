@@ -304,7 +304,7 @@ function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const links = ['Skills', 'Projects', 'Experience', 'Resume', 'References', 'Contact']
+  const links = ['Skills', 'Projects', 'Experience', 'Resume', 'Certifications', 'References', 'Contact']
 
   return (
     <nav className={`nav${scrolled ? ' nav-scrolled' : ''}`}>
@@ -541,6 +541,38 @@ function ResumeBanner() {
         <a href="/Ayushi-Sinha-Resume.docx" download className="btn-download">
           Download Resume
         </a>
+      </div>
+    </section>
+  )
+}
+
+
+// ── Certifications ────────────────────────────────────────────────
+const certifications = [
+  { name: 'SQL Essential Training', issuer: 'NASBA', date: 'Sep 2026', color: '#0078D4' },
+  { name: 'Build with AI: SQL AI Agents in Production', issuer: 'LinkedIn Learning', date: 'Sep 2026', color: '#0A66C2' },
+  { name: 'Build AI Agents with GitHub Copilot by Microsoft Press', issuer: 'Microsoft', date: 'Sep 2026', color: '#00A4EF' },
+  { name: 'Leverage AI in Data Analytics: From Automation to Storytelling', issuer: 'LinkedIn Learning', date: 'Sep 2026', color: '#0A66C2' },
+  { name: 'Learning Data Analytics: Foundations', issuer: 'LinkedIn Learning', date: 'Dec 2024', color: '#0A66C2' },
+  { name: 'Foundations of Digital Consumer Search and Marketing', issuer: 'Coursera', date: 'Aug 2022', color: '#0056D2' },
+]
+
+function Certifications() {
+  const [ref, visible] = useInView()
+  return (
+    <section id="certifications" className="section" ref={ref}>
+      <p className="eyebrow">Verified credentials</p>
+      <h2 className="heading">Certifications</h2>
+      <div className={`cert-grid${visible ? ' reveal' : ''}`}>
+        {certifications.map(c => (
+          <div key={c.name} className="cert-card">
+            <div className="cert-issuer-bar" style={{ background: c.color }}></div>
+            <div className="cert-body">
+              <p className="cert-name">{c.name}</p>
+              <p className="cert-meta">{c.issuer} &nbsp;·&nbsp; {c.date}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )
@@ -829,6 +861,7 @@ export default function App() {
         <Projects />
         <Experience />
         <ResumeBanner />
+        <Certifications />
         <References />
         <Contact />
       </main>

@@ -1292,3 +1292,49 @@ html, body { width: 100%; }
   .chat-panel { width: calc(100vw - 32px); right: 16px; bottom: 88px; }
   .chat-fab { bottom: 20px; right: 16px; }
 }
+
+/* ── Certifications ─────────────────────────────────────────────── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.cert-grid.reveal {
+  opacity: 1;
+  transform: none;
+}
+.cert-card {
+  display: flex;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.cert-issuer-bar {
+  width: 6px;
+  flex-shrink: 0;
+}
+.cert-body {
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.cert-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+.cert-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
